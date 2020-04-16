@@ -1,0 +1,161 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "2b2d16d5-88a6-473b-9b9e-fa6321d16eb1": {
+        "id": "2b2d16d5-88a6-473b-9b9e-fa6321d16eb1",
+        "parent": null,
+        "name": "add-db-entry.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "add-db-entry.py",
+        "cursor": {
+          "lineNumber": 27,
+          "column": 17
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "add-db-entry"
+        },
+        "triggers": [
+          {
+            "resourceName": "apigusEast1historyApiaddpost",
+            "config": {}
+          }
+        ]
+      },
+      "bd5b0245-d281-4427-93dd-f459da7fa7df": {
+        "id": "bd5b0245-d281-4427-93dd-f459da7fa7df",
+        "parent": null,
+        "name": "send-email.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "send-email.py",
+        "cursor": {
+          "lineNumber": 69,
+          "column": 47
+        },
+        "config": {
+          "runtime": "python3.8",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": [],
+          "name": "sendEmail"
+        },
+        "triggers": [
+          {
+            "resourceName": "ddbhistory",
+            "config": {
+              "StartingPosition": "LATEST",
+              "BatchSize": "100",
+              "StreamViewType": "NEW_IMAGE"
+            }
+          }
+        ]
+      }
+    },
+    "openFiles": [
+      "2b2d16d5-88a6-473b-9b9e-fa6321d16eb1",
+      "bd5b0245-d281-4427-93dd-f459da7fa7df"
+    ],
+    "currentFileId": "bd5b0245-d281-4427-93dd-f459da7fa7df",
+    "resources": {
+      "apigusEast1historyApiaddpost": {
+        "name": "apigusEast1historyApiaddpost",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "history-api",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "add",
+          "resourcePath": "/add",
+          "restMethod": "POST",
+          "proxyIntegration": false,
+          "enableCORS": true,
+          "stageMode": 0,
+          "stageName": "prod",
+          "mode": 0
+        }
+      },
+      "ddbhistory": {
+        "name": "ddbhistory",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 0,
+          "table": {
+            "arn": "",
+            "name": "history",
+            "partitionKey": "Name",
+            "partitionKeyType": "S",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 0
+          }
+        }
+      },
+      "ses-janakaud@gmail.com": {
+        "name": "ses-janakaud@gmail.com",
+        "type": "SES",
+        "config": {
+          "selectedIdentity": "janakaud@gmail.com",
+          "projectRegion": "us-east-1"
+        }
+      }
+    },
+    "customTemplate": {
+      "overrideDefault": false,
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "boto3": {
+          "name": "boto3",
+          "language": "python",
+          "version": "1.12.27",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "email-reminders-ftw",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "language": "python",
+    "platformRegions": {},
+    "lastSave": 1587003954910
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "email-reminders-ftw",
+      "url": "https://github.com/janakaud/email-reminders-ftw"
+    }
+  }
+}
