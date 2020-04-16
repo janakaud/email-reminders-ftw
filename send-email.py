@@ -30,7 +30,7 @@ Follow this link to return to your cart:
 
        data = ses.send_email(
 
-           Source="sender@example.com",
+           Source="janakaud@gmail.com",
 
            Destination={
 

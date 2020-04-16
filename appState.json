@@ -11,8 +11,8 @@
         "isRemovable": true,
         "filePath": "add-db-entry.py",
         "cursor": {
-          "lineNumber": 27,
-          "column": 17
+          "lineNumber": 15,
+          "column": 30
         },
         "config": {
           "runtime": "python3.8",
@@ -39,8 +39,8 @@
         "isRemovable": true,
         "filePath": "send-email.py",
         "cursor": {
-          "lineNumber": 69,
-          "column": 47
+          "lineNumber": 8,
+          "column": 1
         },
         "config": {
           "runtime": "python3.8",
@@ -149,7 +149,7 @@
     "platform": "AWS",
     "language": "python",
     "platformRegions": {},
-    "lastSave": 1587003954910
+    "lastSave": 1587005296777
   },
   "VCS_STATE": {
     "provider": "GitHub",
